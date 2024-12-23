@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mytalorzone By Sahiba - Skirts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fauna+One&display=swap" rel="stylesheet">
+    <style>
+        /* Existing styles */
+        body {
+            font-family: 'Fauna One', serif;
+            background-color: #F3E5F5; /* Light lavender background */
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cinzel', serif;
+        }
+        .bg-primary {
+            background-color: #9575CD; /* Lavender */
+        }
+        .text-primary {
+            color: #9575CD; /* Lavender */
+        }
+        .bg-secondary {
+            background-color: #E0E0E0; /* Ash */
+        }
+        .text-secondary {
+            color: #757575; /* Dark ash for text */
+        }
+        .hover\:bg-primary-dark:hover {
+            background-color: #7E57C2; /* Darker lavender for hover states */
+        }
+    
+        /* Image hover animation */
+        img {
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+    
+        img:hover {
+            transform: scale(1.1); /* Scale up */
+            opacity: 0.8; /* Slight opacity change for hover effect */
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <img src="logo.png" alt="Logo" class="w-30 h-20 mr-4"> <!-- Added Logo Image -->
+                <div class="text-gray-800 text-lg font-semibold">
+                    <span class="text-3xl md:text-4xl font-bold">Mytalorzone By Sahiba</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="index.html" class="text-secondary hover:text-primary">Home</a>
+                    <a href="shop.html" class="text-secondary hover:text-primary">Shop</a>
+                    <a href="new-arrivals.html" class="text-secondary hover:text-primary">New Arrivals</a>
+                    <a href="about.html" class="text-secondary hover:text-primary">About</a>
+                    <a href="contact.html" class="text-secondary hover:text-primary">Contact</a>
+                </div>
+                <div class="relative" id="profileDropdown">
+                    <button class="flex items-center text-secondary hover:text-primary focus:outline-none">
+                        My Profile
+                    </button>
+                    <div class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10 hidden" id="profileMenu">
+                        <a href="login.html" class="block px-4 py-2 text-sm text-secondary hover:bg-primary hover:text-white">Login / Signup</a>
+                        <a href="cart.html" class="block px-4 py-2 text-sm text-secondary hover:bg-primary hover:text-white">My Cart</a>
+                        <a href="myorders.html" class="block px-4 py-2 text-sm text-secondary hover:bg-primary hover:text-white">My Orders</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto py-16">
+        <a href="shop.html" class="block text-primary mb-8 hover:underline">← Back to Shop</a>
+        <h1 class="text-4xl font-bold text-center mb-8">Shop Our Skirt Collection</h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <!-- Skirt 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="skirt1.png" alt="FableStreet Women's Pleated Flared Floral Print Midi Skirt" class="w-full h-64 object-cover cursor-pointer" onclick="redirectToDetails('skirt1')">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg mb-2">FableStreet Women's Pleated Flared Floral Print Midi Skirt</h3>
+                    <p class="text-gray-600 mb-4">Rs.1426</p>
+                    <a href="skirts_details.html?product=skirt1" class="bg-gray-200 text-white px-4 py-2 rounded-full hover:bg-gray-800 transition duration-300">View Details</a>
+                </div>
+            </div>
+
+            <!-- Skirt 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="skirt2.png" alt="KZULLY Crepe Western Women's Skirts" class="w-full h-64 object-cover cursor-pointer" onclick="redirectToDetails('skirt2')">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg mb-2">KZULLY Crepe Western Women's Skirts</h3>
+                    <p class="text-gray-600 mb-4">Rs.399</p>
+                    <a href="skirts_details.html?product=skirt2" class="bg-gray-200 text-white px-4 py-2 rounded-full hover:bg-gray-800 transition duration-300">View Details</a>
+                </div>
+            </div>
+
+            <!-- Skirt 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="skirt3.png" alt="KZULLY Fashionable Floral Printed Pleated Maxi Skirt" class="w-full h-64 object-cover cursor-pointer" onclick="redirectToDetails('skirt3')">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg mb-2">KZULLY Fashionable Floral Printed Pleated Maxi Skirt</h3>
+                    <p class="text-gray-600 mb-4">Rs.449</p>
+                    <a href="skirts_details.html?product=skirt3" class="bg-gray-200 text-white px-4 py-2 rounded-full hover:bg-gray-800 transition duration-300">View Details</a>
+                </div>
+            </div>
+
+            <!-- Skirt 4 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="skirt4.png" alt="BLACKX Denim Skirt for Women" class="w-full h-64 object-cover cursor-pointer" onclick="redirectToDetails('skirt4')">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg mb-2">BLACKX Denim Skirt for Women</h3>
+                    <p class="text-gray-600 mb-4">Rs.699</p>
+                    <a href="skirts_details.html?product=skirt4" class="bg-gray-200 text-white px-4 py-2 rounded-full hover:bg-gray-800 transition duration-300">View Details</a>
+                </div>
+            </div>
+
+            <!-- Skirt 5 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="skirt5.png" alt="VAGISHA Polyblend Blooming Flared Long Stitched Floor Length Skirt" class="w-full h-64 object-cover cursor-pointer" onclick="redirectToDetails('skirt5')">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg mb-2">VAGISHA Polyblend Blooming Flared Long Stitched Floor Length Skirt</h3>
+                    <p class="text-gray-600 mb-4">Rs.732</p>
+                    <a href="skirts_details.html?product=skirt5" class="bg-gray-200 text-white px-4 py-2 rounded-full hover:bg-gray-800 transition duration-300">View Details</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h3 class="text-lg font-semibold mb-2">Mytalorzone By Sahiba</h3>
+                    <p class="text-gray-400">Creative, unique, and diverse clothing for girls.</p>
+                </div>
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h3 class="text-lg font-semibold mb-2">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="shop.html" class="text-gray-400 hover:text-white">Shop</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h3 class="text-lg font-semibold mb-2">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-sm text-gray-400 text-center">
+                <p>&copy; 2023 Mytalorzone By Sahiba. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function redirectToDetails(productId) {
+            window.location.href = `skirts_details.html?product=${productId}`;
+        }
+    </script>
+</body>
+</html>

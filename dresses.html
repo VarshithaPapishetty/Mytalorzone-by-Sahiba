@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mytalorzone By Sahiba - Dresses</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fauna+One&display=swap" rel="stylesheet">
+    <style>
+        /* Existing styles */
+        body {
+            font-family: 'Fauna One', serif;
+            background-color: #F3E5F5; /* Light lavender background */
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cinzel', serif;
+        }
+        .bg-primary {
+            background-color: #9575CD; /* Lavender */
+        }
+        .text-primary {
+            color: #9575CD; /* Lavender */
+        }
+        .bg-secondary {
+            background-color: #E0E0E0; /* Ash */
+        }
+        .text-secondary {
+            color: #757575; /* Dark ash for text */
+        }
+        .hover\:bg-primary-dark:hover {
+            background-color: #7E57C2; /* Darker lavender for hover states */
+        }
+    
+        /* Image hover animation */
+        img {
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+    
+        img:hover {
+            transform: scale(1.1); /* Scale up */
+            opacity: 0.8; /* Slight opacity change for hover effect */
+        }
+    </style>
+    
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <img src="logo.png" alt="Logo" class="w-30 h-20 mr-4"> <!-- Added Logo Image -->
+                <div class="text-gray-800 text-lg font-semibold">
+                    <span class="text-3xl md:text-4xl font-bold">Mytalorzone By Sahiba</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="index.html" class="text-secondary hover:text-primary">Home</a>
+                    <a href="shop.html" class="text-secondary hover:text-primary">Shop</a>
+                    <a href="new-arrivals.html" class="text-secondary hover:text-primary">New Arrivals</a>
+                    <a href="about.html" class="text-secondary hover:text-primary">About</a>
+                    <a href="contact.html" class="text-secondary hover:text-primary">Contact</a>
+                </div>
+                <div class="relative" id="profileDropdown">
+                    <button class="flex items-center text-secondary hover:text-primary focus:outline-none">
+                        My Profile
+                    </button>
+                    <div class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10 hidden" id="profileMenu">
+                        <a href="login.html" class="block px-4 py-2 text-sm text-secondary hover:bg-primary hover:text-white">Login / Signup</a>
+                        <a href="cart.html" class="block px-4 py-2 text-sm text-secondary hover:bg-primary hover:text-white">My Cart</a>
+                        <a href="myorders.html" class="block px-4 py-2 text-sm text-secondary hover:bg-primary hover:text-white">My Orders</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto py-16">
+        <a href="shop.html" class="block text-primary mb-8 hover:underline">← Back to Shop</a> <!-- Back button -->
+        
+        <h1 class="text-4xl font-bold text-center mb-8">Shop Our Collection</h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <!-- Dress 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="dress1.png" alt="Beautiful Pink Abstract Printed Midi Dress" class="w-full h-64 object-cover cursor-pointer" onclick="redirectToDetails('dress1')">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg mb-2">Beautiful Pink Abstract Printed Midi Dress</h3>
+                    <p class="text-gray-600 mb-4">Rs.494</p>
+                    <a href="product_details.html?product=dress1" class="bg-gray-200 text-white px-4 py-2 rounded-full hover:bg-gray-800 transition duration-300">View Details</a>
+                </div>
+            </div>
+
+            <!-- Dress 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="dress2.png" alt="One Piece Dress for Women | Stylish Dress" class="w-full h-64 object-cover cursor-pointer" onclick="redirectToDetails('dress2')">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg mb-2">One Piece Dress for Women | Stylish Dress</h3>
+                    <p class="text-gray-600 mb-4">Rs.694</p>
+                    <a href="product_details.html?product=dress2" class="bg-gray-200 text-white px-4 py-2 rounded-full hover:bg-gray-800 transition duration-300">View Details</a>
+                </div>
+            </div>
+
+            <!-- Dress 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="dress3.png" alt="StyleStone Women Long Dress" class="w-full h-64 object-cover cursor-pointer" onclick="redirectToDetails('dress3')">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg mb-2">StyleStone Women Long Dress</h3>
+                    <p class="text-gray-600 mb-4">Rs.849</p>
+                    <a href="product_details.html?product=dress3" class="bg-gray-200 text-white px-4 py-2 rounded-full hover:bg-gray-800 transition duration-300">View Details</a>
+                </div>
+            </div>
+
+            <!-- Dress 4 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="dress4.png" alt="Harpa Women Standard Length Dress" class="w-full h-64 object-cover cursor-pointer" onclick="redirectToDetails('dress4')">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg mb-2">Harpa Women Standard Length Dress</h3>
+                    <p class="text-gray-600 mb-4">Rs.499</p>
+                    <a href="product_details.html?product=dress4" class="bg-gray-200 text-white px-4 py-2 rounded-full hover:bg-gray-800 transition duration-300">View Details</a>
+                </div>
+            </div>
+
+            <!-- Dress 5 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="dress5.png" alt="GRECIILOOKS Spandex Ethnic Wear Co Ord Set for Women" class="w-full h-64 object-cover cursor-pointer" onclick="redirectToDetails('dress5')">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg mb-2">GRECIILOOKS Spandex Ethnic Wear Co Ord Set for Women</h3>
+                    <p class="text-gray-600 mb-4">Rs.694</p>
+                    <a href="product_details.html?product=dress5" class="bg-gray-200 text-white px-4 py-2 rounded-full hover:bg-gray-800 transition duration-300">View Details</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h3 class="text-lg font-semibold mb-2">Mytalorzone By Sahiba</h3>
+                    <p class="text-gray-400">Creative, unique, and diverse clothing for girls.</p>
+                </div>
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h3 class="text-lg font-semibold mb-2">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="shop.html" class="text-gray-400 hover:text-white">Shop</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h3 class="text-lg font-semibold mb-2">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-sm text-gray-400 text-center">
+                <p>&copy; 2023 Mytalorzone By Sahiba. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function redirectToDetails(productId) {
+            window.location.href = `product_details.html?product=${productId}`;
+        }
+    </script>
+</body>
+</html>

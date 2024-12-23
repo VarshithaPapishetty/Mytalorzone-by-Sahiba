@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mytalorzone By Sahiba</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fauna+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        body {
+            font-family: 'Fauna One', serif;
+            background-color: #F3E5F5; /* Light lavender background */
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cinzel', serif;
+        }
+        .bg-primary {
+            background-color: #9575CD; /* Lavender */
+        }
+        .text-primary {
+            color: #9575CD; /* Lavender */
+        }
+        .bg-secondary {
+            background-color: #E0E0E0; /* Ash */
+        }
+        .text-secondary {
+            color: #757575; /* Dark ash for text */
+        }
+        .hover\:bg-primary-dark:hover {
+            background-color: #7E57C2; /* Darker lavender for hover states */
+        }
+        .scroll-nav {
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .scroll-nav.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .hero-bg {
+            background-image: url('bg1.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .fade-in {
+            animation: fadeIn 2s ease-in forwards;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-400">
+
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <img src="logo.png" alt="Logo" class="w-30 h-20 mr-4"> <!-- Added Logo Image -->
+                <div class="text-gray-800 text-lg font-semibold">
+                    <span class="text-3xl md:text-4xl font-bold">Mytalorzone By Sahiba</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="index.html" class="text-secondary hover:text-primary">Home</a>
+                    <a href="shop.html" class="text-secondary hover:text-primary">Shop</a>
+                    <a href="new-arrivals.html" class="text-secondary hover:text-primary">New Arrivals</a>
+                    <a href="about.html" class="text-secondary hover:text-primary">About</a>
+                    <a href="contact.html" class="text-secondary hover:text-primary">Contact</a>
+                </div>
+                <div class="relative" id="profileDropdown">
+                    <button class="flex items-center text-secondary hover:text-primary focus:outline-none">
+                        My Profile
+                    </button>
+                    <div class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10 hidden" id="profileMenu">
+                        <a href="login.html" class="block px-4 py-2 text-sm text-secondary hover:bg-primary hover:text-white">Login / Signup</a>
+                        <a href="cart.html" class="block px-4 py-2 text-sm text-secondary hover:bg-primary hover:text-white">My Cart</a>
+                        <a href="myorders.html" class="block px-4 py-2 text-sm text-secondary hover:bg-primary hover:text-white">My Orders</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+
+    <div id="sideMenu" class="fixed top-0 right-0 w-64 h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-20">
+        <div class="p-6">
+            <button id="closeSideMenu" class="absolute top-4 right-4 text-gray-600 hover:text-gray-800">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2 class="text-2xl font-bold mb-6">Menu</h2>
+            <ul class="space-y-4">
+                <li><a href="profile.html" class="block text-secondary hover:text-primary">Profile</a></li>
+                <li><a href="cart.html" class="block text-secondary hover:text-primary">Cart</a></li>
+                <li><a href="orders.html" class="block text-secondary hover:text-primary">My Orders</a></li>
+                <li><a href="wishlist.html" class="block text-secondary hover:text-primary">Wishlist</a></li>
+                <li><a href="settings.html" class="block text-secondary hover:text-primary">Settings</a></li>
+                <li><a href="#" id="logoutButton" class="block text-secondary hover:text-primary">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero hero-bg fade-in">
+            <div class="container mx-auto text-center text-white">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to Mytalorzone By Sahiba</h1>
+                <p class="text-xl mb-8">Discover creative, unique, and diverse clothing for girls</p>
+                <a href="shop.html" class="bg-gray-200 text-white px-4 py-2 rounded-full hover:bg-gray-800 transition duration-300">Shop Now</a>
+            </div>
+        </section>
+
+        <nav id="scrollNav" class="scroll-nav fixed left-1/2 transform -translate-x-1/2 bottom-8 bg-white rounded-full shadow-lg px-6 py-3 z-10">
+            <ul class="flex space-x-6">
+                <li><a href="#shop" class="text-secondary hover:text-primary">Shop</a></li>
+                <li><a href="#new-arrivals" class="text-secondary hover:text-primary">New Arrivals</a></li>
+                <li><a href="#about" class="text-secondary hover:text-primary">About</a></li>
+                <li><a href="#contact" class="text-secondary hover:text-primary">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section id="shop" class="py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-8">Shop Our Collection</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="top2.png" alt="FIORRA Women's Green Cotton Top with Lace Detail and Printed Pattern" class="w-full h-80 object-cover cursor-pointer">
+                        <div class="p-4">
+                            <h2 class="text-xl font-semibold">FIORRA Women's Green Cotton Top with Lace Detail and Printed Pattern</h2>
+                            <a href="tops_details.html?product=top2" class="bg-gray-200 text-white px-4 py-2 rounded-full hover:bg-gray-800 transition duration-300">View Details</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="skirt2.png" alt="KZULLY Crepe Western Women's Skirts" class="w-full h-64 object-cover cursor-pointer" onclick="redirectToDetails('skirt2')">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">KZULLY Crepe Western Women's Skirts</h3>
+                            <p class="text-gray-600 mb-4">Rs.399</p>
+                            <a href="skirts_details.html?product=skirt2" class="bg-gray-200 text-white px-4 py-2 rounded-full hover:bg-gray-800 transition duration-300">View Details</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="dress4.png" alt="Harpa Women Standard Length Dress" class="w-full h-64 object-cover cursor-pointer" onclick="redirectToDetails('dress4')">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">Harpa Women Standard Length Dress</h3>
+                            <p class="text-gray-600 mb-4">Rs.499</p>
+                            <a href="product_details.html?product=dress4" class="bg-gray-200 text-white px-4 py-2 rounded-full hover:bg-gray-800 transition duration-300">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <a href="shop.html" class="bg-gray-200 text-white px-4 py-2 rounded-full hover:bg-gray-800 transition duration-300">View All Products</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="new-arrivals" class="bg-secondary py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-8">New Arrivals</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="dress1.png" alt="Beautiful Pink Abstract Printed Midi Dress" class="w-full h-64 object-cover cursor-pointer" onclick="redirectToDetails('dress1')">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">Beautiful Pink Abstract Printed Midi Dress</h3>
+                            <p class="text-gray-600 mb-4">Rs.494</p>
+                            <a href="product_details.html?product=dress1" class="bg-gray-200 text-white px-4 py-2 rounded-full hover:bg-gray-800 transition duration-300">View Details</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="skirt5.png" alt="VAGISHA Polyblend Blooming Flared Long Stitched Floor Length Skirt" class="w-full h-64 object-cover cursor-pointer" onclick="redirectToDetails('skirt5')">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">VAGISHA Polyblend Blooming Flared Long Stitched Floor Length Skirt</h3>
+                            <p class="text-gray-600 mb-4">Rs.732</p>
+                            <a href="skirts_details.html?product=skirt5" class="bg-gray-200 text-white px-4 py-2 rounded-full hover:bg-gray-800 transition duration-300">View Details</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="top5.png" alt="Fitknits Round Neck Full Sleeve Casual Tops for Womens | Hosiery Tops for Women" class="w-full h-80 object-cover cursor-pointer">
+                        <div class="p-4">
+                            <h2 class="text-xl font-semibold">Fitknits Round Neck Full Sleeve Casual Tops for Womens</h2>
+                            <p class="text-gray-600 mb-4">Rs.899</p>
+                            <a href="tops_details.html?product=top5" class="bg-gray-200 text-white px-4 py-2 rounded-full hover:bg-gray-800 transition duration-300">View Details</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="accessory5.png" alt="Shining Diva Fashion 18 pairs Combo Set Celebrity " class="w-full h-64 object-cover cursor-pointer" onclick="redirectToDetails('accessory5')">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">Shining Diva Fashion 18 pairs Combo Set Celebrity </h3>
+                            <p class="text-gray-600 mb-4">Rs.899</p>
+                            <a href="accessories_details.html?product=accessory5" class="bg-gray-200 text-white px-4 py-2 rounded-full hover:bg-gray-800 transition duration-300">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <a href="new-arrivals.html" class="bg-gray-200 text-white px-4 py-2 rounded-full hover:bg-gray-800 transition duration-300">View All New Arrivals</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-8">About Mytalorzone By Sahiba</h2>
+                <div class="text-center">
+                    <p class="text-lg text-gray-600 mb-6">Mytalorzone By Sahiba is your go-to online store for trendy and unique clothing. We offer a wide range of stylish outfits that blend comfort with elegance, ensuring you stand out wherever you go. Our mission is to bring creativity and quality to your wardrobe, offering pieces that reflect your personality.</p>
+                    <a href="about.html" class="bg-gray-200 text-white px-4 py-2 rounded-full hover:bg-gray-800 transition duration-300">Learn More About Us</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-secondary py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
+                <form action="#" method="POST" class="max-w-lg mx-auto">
+                    <div class="mb-6">
+                        <label for="name" class="block text-lg font-semibold mb-2">Name</label>
+                        <input type="text" id="name" name="name" class="w-full p-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block text-lg font-semibold mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="w-full p-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-lg font-semibold mb-2">Message</label>
+                        <textarea id="message" name="message" class="w-full p-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="bg-gray-200 text-white px-4 py-2 rounded-full hover:bg-gray-800 transition duration-300">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <footer class="bg-gray-800 text-white py-8">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-wrap justify-between">
+                    <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                        <h3 class="text-lg font-semibold mb-2">Mytalorzone By Sahiba</h3>
+                        <p class="text-gray-400">Creative, unique, and diverse clothing for girls.</p>
+                    </div>
+                    <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                        <h3 class="text-lg font-semibold mb-2">Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                            <li><a href="shop.html" class="text-gray-400 hover:text-white">Shop</a></li>
+                            <li><a href="about.html" class="text-gray-400 hover:text-white">About</a></li>
+                            <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                        <h3 class="text-lg font-semibold mb-2">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-gray-700 mt-8 pt-8 text-sm text-gray-400 text-center">
+                    <p>&copy; 2023 Mytalorzone By Sahiba. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sideMenu = document.getElementById('sideMenu');
+            const closeSideMenu = document.getElementById('closeSideMenu');
+            const profileDropdown = document.getElementById('profileDropdown');
+            const profileMenu = document.getElementById('profileMenu');
+
+            document.getElementById('logoutButton').addEventListener('click', () => {
+                // Handle logout functionality here
+                alert('Logged out successfully!');
+            });
+
+            profileDropdown.addEventListener('click', () => {
+                profileMenu.classList.toggle('hidden');
+            });
+
+            closeSideMenu.addEventListener('click', () => {
+                sideMenu.classList.toggle('translate-x-full');
+            });
+        });
+    </script>
+
+</body>
+</html>
